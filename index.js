@@ -44,7 +44,7 @@ const employeeTypeQuestion = [
   }
 
 
-  .then((response) => {
+.then(function (response) {
   
         const newManager = new Manager( 
           response.name

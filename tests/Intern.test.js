@@ -1,20 +1,23 @@
-const Employee = require('./Employee.test');
+const Employee = require('../lib/Employee');
+const Intern = require("../lib/Intern")
 
 
-class Intern extends Employee {
-  constructor (employeeID, name, role ) {
-    super(employeeID, 'Ann', 'Intern' )
-    this.employeeID = employeeID;
-    this.name = name;
-    this.role = role;
-  }
+test("To check if the Intern constructor will render", ()=> {
+  expect(employee.name).toBe('John');
+  expect(employee.id).toBe('DFG995');
+  expect(employee.emailAddress).toBe('John998@gmai.com');
+  expect(employee.school).toBe("Virginia Union");
+})
+test("test if we can render the getName()", () => {
+  expect(employee.getName()).toBe('John');
 
-}
-
-checkEmployee(); {
-    console.log(`The Intern name is ${this.name} and their ID is ${this.employeeID} .  `)
-}
-
-const intern = new Intern( ASK441, 'Ann', 'Intern')
-Intern.printInfo();
-Intern.checkEmployee();
+})  
+test("test if we can render the getID()", () => {
+  expect(employee.getID()).toBe('DFG995');
+})  
+test("test if we can render the getEmailAddress()", () => {
+  expect(employee.getEmailAddress()).toBe('John998@gmai.com');
+})
+test("test if we can render the getSchool()", () => {
+  expect(employee.getSchool()).toBe('Virginia Union');
+})

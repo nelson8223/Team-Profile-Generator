@@ -1,17 +1,22 @@
-class Employee {
-constructor(employeeID, emailAddress,name, role ) {
-    this.employeeID = employeeID;
-    this.emailAddress = emailAddress;
-    this.name = name;
-    this.role= role;
+const Employee =  require('../lib/Employee')
 
-}}
+test("To check if the Employee constructor will render", () => {
+expect(employee.name).toBe('Orlando');
+expect(employee.id).toBe('QIV732');
+expect(employee.emailAddress).toBe('nelson8223@gmai.com');
 
+})
 
-printInfo(); {
-    console.log(`The Employee name is ${this.name} and their employee ID is ${this.employeeID} .  `)
-    console.log(`The associate email address is  ${this.emailAddress}.  `)
-    console.log(`Their current role at the Company is  ${this.role}.  `)
-}
+test("test if we can render the getName()", () => {
+expect(employee.getName()).toBe('Orlando');
 
-module.exports = Employee;
+})
+test("test if we can render the getId()", () => {
+    expect(employee.getID()).toBe('QIV732');
+})
+
+test("test if we can render the getEmailAddress()", () => {
+    expect(employee.getEmailAddress()).toBe('nelson8223@gmai.com');
+
+})
+
